@@ -1,0 +1,366 @@
+{
+    "1,1": {
+        "dealer": 5.7637,
+        "non-dealer": 6.03645
+    },
+    "1,2": {
+        "dealer": 4.70445,
+        "non-dealer": 4.8255
+    },
+    "1,3": {
+        "dealer": 4.75305,
+        "non-dealer": 4.9697
+    },
+    "1,4": {
+        "dealer": 5.39395,
+        "non-dealer": 5.67765
+    },
+    "1,5": {
+        "dealer": 5.5281,
+        "non-dealer": 5.95125
+    },
+    "1,6": {
+        "dealer": 4.1055,
+        "non-dealer": 4.7387
+    },
+    "1,7": {
+        "dealer": 4.08945,
+        "non-dealer": 4.57095
+    },
+    "1,8": {
+        "dealer": 4.1508,
+        "non-dealer": 4.619
+    },
+    "1,9": {
+        "dealer": 3.7125,
+        "non-dealer": 4.34535
+    },
+    "1,10": {
+        "dealer": 3.76075,
+        "non-dealer": 4.1791
+    },
+    "1,11": {
+        "dealer": 3.96865,
+        "non-dealer": 4.4196
+    },
+    "1,12": {
+        "dealer": 3.65785,
+        "non-dealer": 4.0634
+    },
+    "1,13": {
+        "dealer": 3.5994,
+        "non-dealer": 4.00095
+    },
+    "2,2": {
+        "dealer": 6.05315,
+        "non-dealer": 6.1389
+    },
+    "2,3": {
+        "dealer": 7.1096,
+        "non-dealer": 7.2109
+    },
+    "2,4": {
+        "dealer": 4.95915,
+        "non-dealer": 5.14095
+    },
+    "2,5": {
+        "dealer": 5.67735,
+        "non-dealer": 6.03325
+    },
+    "2,6": {
+        "dealer": 4.2527,
+        "non-dealer": 4.7717
+    },
+    "2,7": {
+        "dealer": 4.276,
+        "non-dealer": 4.75175
+    },
+    "2,8": {
+        "dealer": 4.07185,
+        "non-dealer": 4.51615
+    },
+    "2,9": {
+        "dealer": 4.0933,
+        "non-dealer": 4.5544
+    },
+    "2,10": {
+        "dealer": 3.9276,
+        "non-dealer": 4.29305
+    },
+    "2,11": {
+        "dealer": 4.1863,
+        "non-dealer": 4.49325
+    },
+    "2,12": {
+        "dealer": 3.9269,
+        "non-dealer": 4.2269
+    },
+    "2,13": {
+        "dealer": 3.8268,
+        "non-dealer": 4.14685
+    },
+    "3,3": {
+        "dealer": 6.2636,
+        "non-dealer": 6.53475
+    },
+    "3,4": {
+        "dealer": 5.3391,
+        "non-dealer": 5.66155
+    },
+    "3,5": {
+        "dealer": 6.33255,
+        "non-dealer": 6.6815
+    },
+    "3,6": {
+        "dealer": 4.13155,
+        "non-dealer": 4.6761
+    },
+    "3,7": {
+        "dealer": 4.17205,
+        "non-dealer": 4.67845
+    },
+    "3,8": {
+        "dealer": 4.33295,
+        "non-dealer": 4.69745
+    },
+    "3,9": {
+        "dealer": 4.06745,
+        "non-dealer": 4.5273
+    },
+    "3,10": {
+        "dealer": 4.0014,
+        "non-dealer": 4.3499
+    },
+    "3,11": {
+        "dealer": 4.2383,
+        "non-dealer": 4.6131
+    },
+    "3,12": {
+        "dealer": 3.9131,
+        "non-dealer": 4.2995
+    },
+    "3,13": {
+        "dealer": 3.9077,
+        "non-dealer": 4.31335
+    },
+    "4,4": {
+        "dealer": 6.0325,
+        "non-dealer": 6.26815
+    },
+    "4,5": {
+        "dealer": 6.68965,
+        "non-dealer": 7.13785
+    },
+    "4,6": {
+        "dealer": 4.32935,
+        "non-dealer": 4.9492
+    },
+    "4,7": {
+        "dealer": 4.1124,
+        "non-dealer": 4.51335
+    },
+    "4,8": {
+        "dealer": 4.27275,
+        "non-dealer": 4.5744
+    },
+    "4,9": {
+        "dealer": 4.0484,
+        "non-dealer": 4.5555
+    },
+    "4,10": {
+        "dealer": 3.88815,
+        "non-dealer": 4.2564
+    },
+    "4,11": {
+        "dealer": 4.10365,
+        "non-dealer": 4.47445
+    },
+    "4,12": {
+        "dealer": 3.81745,
+        "non-dealer": 4.1851
+    },
+    "4,13": {
+        "dealer": 3.6928,
+        "non-dealer": 4.08965
+    },
+    "5,5": {
+        "dealer": 8.7174,
+        "non-dealer": 9.24255
+    },
+    "5,6": {
+        "dealer": 6.8444,
+        "non-dealer": 7.3652
+    },
+    "5,7": {
+        "dealer": 6.20135,
+        "non-dealer": 6.7575
+    },
+    "5,8": {
+        "dealer": 5.5967,
+        "non-dealer": 6.08795
+    },
+    "5,9": {
+        "dealer": 5.4963,
+        "non-dealer": 6.09705
+    },
+    "5,10": {
+        "dealer": 6.69275,
+        "non-dealer": 7.18105
+    },
+    "5,11": {
+        "dealer": 6.9452,
+        "non-dealer": 7.46525
+    },
+    "5,12": {
+        "dealer": 6.64385,
+        "non-dealer": 7.1665
+    },
+    "5,13": {
+        "dealer": 6.5327,
+        "non-dealer": 7.01965
+    },
+    "6,6": {
+        "dealer": 6.0928,
+        "non-dealer": 6.771
+    },
+    "6,7": {
+        "dealer": 5.2252,
+        "non-dealer": 6.0522
+    },
+    "6,8": {
+        "dealer": 4.8882,
+        "non-dealer": 5.58585
+    },
+    "6,9": {
+        "dealer": 5.32335,
+        "non-dealer": 6.0504
+    },
+    "6,10": {
+        "dealer": 3.3738,
+        "non-dealer": 4.0508
+    },
+    "6,11": {
+        "dealer": 3.6287,
+        "non-dealer": 4.29275
+    },
+    "6,12": {
+        "dealer": 3.30935,
+        "non-dealer": 3.97905
+    },
+    "6,13": {
+        "dealer": 3.2729,
+        "non-dealer": 3.90535
+    },
+    "7,7": {
+        "dealer": 6.22495,
+        "non-dealer": 6.77615
+    },
+    "7,8": {
+        "dealer": 6.8802,
+        "non-dealer": 7.45785
+    },
+    "7,9": {
+        "dealer": 4.3061,
+        "non-dealer": 5.1105
+    },
+    "7,10": {
+        "dealer": 3.43735,
+        "non-dealer": 3.9734
+    },
+    "7,11": {
+        "dealer": 3.7442,
+        "non-dealer": 4.2764
+    },
+    "7,12": {
+        "dealer": 3.42375,
+        "non-dealer": 3.9787
+    },
+    "7,13": {
+        "dealer": 3.38595,
+        "non-dealer": 3.932
+    },
+    "8,8": {
+        "dealer": 5.8335,
+        "non-dealer": 6.3907
+    },
+    "8,9": {
+        "dealer": 4.86785,
+        "non-dealer": 5.61625
+    },
+    "8,10": {
+        "dealer": 4.0201,
+        "non-dealer": 4.6449
+    },
+    "8,11": {
+        "dealer": 3.64505,
+        "non-dealer": 4.19085
+    },
+    "8,12": {
+        "dealer": 3.4162,
+        "non-dealer": 3.9655
+    },
+    "8,13": {
+        "dealer": 3.32295,
+        "non-dealer": 3.91155
+    },
+    "9,9": {
+        "dealer": 5.3627,
+        "non-dealer": 6.1154
+    },
+    "9,10": {
+        "dealer": 4.50525,
+        "non-dealer": 5.1756
+    },
+    "9,11": {
+        "dealer": 4.0209,
+        "non-dealer": 4.7588
+    },
+    "9,12": {
+        "dealer": 3.17215,
+        "non-dealer": 3.88845
+    },
+    "9,13": {
+        "dealer": 3.19105,
+        "non-dealer": 3.85895
+    },
+    "10,10": {
+        "dealer": 5.0396,
+        "non-dealer": 5.5376
+    },
+    "10,11": {
+        "dealer": 4.58045,
+        "non-dealer": 5.24105
+    },
+    "10,12": {
+        "dealer": 3.6827,
+        "non-dealer": 4.2324
+    },
+    "10,13": {
+        "dealer": 2.92635,
+        "non-dealer": 3.50295
+    },
+    "11,11": {
+        "dealer": 5.52825,
+        "non-dealer": 6.0521
+    },
+    "11,12": {
+        "dealer": 4.6056,
+        "non-dealer": 5.19295
+    },
+    "11,13": {
+        "dealer": 3.9302,
+        "non-dealer": 4.4376
+    },
+    "12,12": {
+        "dealer": 4.8547,
+        "non-dealer": 5.37155
+    },
+    "12,13": {
+        "dealer": 3.50675,
+        "non-dealer": 4.0916
+    },
+    "13,13": {
+        "dealer": 4.6522,
+        "non-dealer": 5.19475
+    }
+}
