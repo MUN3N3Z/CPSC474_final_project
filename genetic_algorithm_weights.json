@@ -1,0 +1,10 @@
+{
+    "score_points": 4.38721728,
+    "lead_low_card": 1.91545553,
+    "lead_sum_to_15": 1.90223145,
+    "closest_to_31": 1.00869772,
+    "save_ace": -0.138995,
+    "paly_ace": 0.7034629,
+    "penaliza_5": -1.5572629,
+    "illegal_play": -3.63035368
+}

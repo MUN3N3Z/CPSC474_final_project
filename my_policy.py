@@ -62,16 +62,6 @@ class RuleBasedPegger(PegPolicy):
     """
     def __init__(self, game: Game, card_weights: Dict[str, float]):
         super().__init__(game)
-        # self._card_weights = {
-        #     'score_points': 1,
-        #     'lead_low_card': 0.3,
-        #     'lead_sum_to_15': 0.4,
-        #     'closest_to_31': 0.01,
-        #     'save_ace': -0.1,
-        #     'play_ace': 0.2,
-        #     'penalize_5': -0.1,
-        #     'illegal_play': -1,
-        # }
         self._card_weights = card_weights
 
     def peg(self, cards: List[Card], history: Pegging, turn: Card, scores: Tuple[int], am_dealer: bool):
