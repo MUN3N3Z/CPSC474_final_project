@@ -1,10 +1,13 @@
 import pygad
 import numpy as np
 import itertools as it
+from typing import Dict
 from cribbage import Game, evaluate_policies
 from my_policy import StatisticalThrower, RuleBasedPegger
 from policy import CompositePolicy, GreedyThrower, GreedyPegger
 from json import dump
+from functools import partial
+import multiprocessing
 
 ASSESSMENT_GAMES = 1000
         
@@ -24,7 +27,7 @@ class PeggingGeneticAlgorithm:
         self.ga_instance = pygad.GA(
             num_generations=20,
             num_parents_mating=3,
-            fitness_func=self._fitness,
+            fitness_func=self._parallel_fitness,
             sol_per_pop=20,
             num_genes=8,
             gene_space=self._gene_space,
@@ -43,28 +46,36 @@ class PeggingGeneticAlgorithm:
             'closest_to_31', 'save_ace', 'play_ace', 
             'penalize_5', 'illegal_play'
         ]
+        self._num_cores = max(1, multiprocessing.cpu_count() - 1)
 
-    def _fitness(self, pygad_instance, solution: np.ndarray[np.float16], solution_idx: int):
+    def _fitness(self, card_weights: Dict[str, float]) -> float:
+        """
+            - Evaluate the fitness of multiple solutions in parallel
+        """
+        game = Game()
+        benchmark = CompositePolicy(game, GreedyThrower(game), GreedyPegger(game))
+        policy_with_genetic_weights = CompositePolicy(game, StatisticalThrower(game), RuleBasedPegger(game, card_weights))
+        results = evaluate_policies(game, policy_with_genetic_weights, benchmark, ASSESSMENT_GAMES)
+        points = sum(match_value * number_of_games for match_value, number_of_games in results[3].items())
+        return points / ASSESSMENT_GAMES
+        
+
+    def _parallel_fitness(self, pygad_instance, solution: np.ndarray[np.float16], solution_idx: int) -> float:
         """
             - Run a cribbage agent using the weights from the solution in its rule-based pegging strategy and
             compare its performance against a baseline greedy pegger
             - Both agents will use the same statistical throwing strategy
         """
-        
         card_weights = {key: value for key, value in zip(self._keys, solution)}
-        game = Game()
-        benchmark = CompositePolicy(game, GreedyThrower(game), GreedyPegger(game))
-        policy_with_genetic_weights = CompositePolicy(game, StatisticalThrower(game), RuleBasedPegger(game, card_weights))
-        results = evaluate_policies(game, policy_with_genetic_weights, benchmark, ASSESSMENT_GAMES)
-        points = 0
-        for match_value, number_of_games in results[3].items():
-            points += match_value * match_value * number_of_games
-        return points / ASSESSMENT_GAMES
+        with multiprocessing.Pool(processes=self._num_cores) as pool:
+            fitness_scores = pool.apply(self._fitness, (card_weights,))
+        
+        return fitness_scores
     
     def run(self):
         self.ga_instance.run()
         solution, _, _ = self.ga_instance.best_solution()
-        with open("genetic_algorithm_weights.json", "a") as f:
+        with open("genetic_algorithm_weights2.json", "a") as f:
             best_weights_dict = {key: value for key, value in zip(self._keys, solution)}
             dump(best_weights_dict, f, indent=4)
 
