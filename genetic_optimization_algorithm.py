@@ -6,10 +6,9 @@ from cribbage import Game, evaluate_policies
 from my_policy import StatisticalThrower, RuleBasedPegger
 from policy import CompositePolicy, GreedyThrower, GreedyPegger
 from json import dump
-from functools import partial
-import multiprocessing
+import concurrent.futures
 
-ASSESSMENT_GAMES = 1000
+ASSESSMENT_GAMES = 100
         
 class PeggingGeneticAlgorithm:
     def __init__(self):
@@ -25,7 +24,7 @@ class PeggingGeneticAlgorithm:
             {'low': -5, 'high': 0},  # illegal_play
         ]
         self.ga_instance = pygad.GA(
-            num_generations=20,
+            num_generations=50,
             num_parents_mating=3,
             fitness_func=self._parallel_fitness,
             sol_per_pop=20,
@@ -46,7 +45,6 @@ class PeggingGeneticAlgorithm:
             'closest_to_31', 'save_ace', 'play_ace', 
             'penalize_5', 'illegal_play'
         ]
-        self._num_cores = max(1, multiprocessing.cpu_count() - 1)
 
     def _fitness(self, card_weights: Dict[str, float]) -> float:
         """
@@ -67,10 +65,11 @@ class PeggingGeneticAlgorithm:
             - Both agents will use the same statistical throwing strategy
         """
         card_weights = {key: value for key, value in zip(self._keys, solution)}
-        with multiprocessing.Pool(processes=self._num_cores) as pool:
-            fitness_scores = pool.apply(self._fitness, (card_weights,))
+        with concurrent.futures.ProcessPoolExecutor() as executor:
+            future = executor.submit(self._fitness, card_weights)
+            fitness_score = future.result()
         
-        return fitness_scores
+        return fitness_score
     
     def run(self):
         self.ga_instance.run()
